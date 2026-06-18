@@ -95,22 +95,47 @@ export function renderAbout() {
         </div>
         <div class="values-grid stagger-children">
           <div class="card value-card">
-            <div class="value-icon">🤝</div>
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 11 2 2 4-4" />
+              </svg>
+            </div>
             <h3>${t('values.integrity')}</h3>
             <p>${t('values.integrityDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">🏆</div>
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="7" stroke-dasharray="3 3" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
             <h3>${t('values.quality')}</h3>
             <p>${t('values.qualityDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">💡</div>
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                <path d="M9 18h6M10 22h4" />
+                <circle cx="12" cy="8.5" r="2" />
+                <path d="M12 5V4M12 13v-1M8.5 8.5h-1M16.5 8.5h-1" />
+              </svg>
+            </div>
             <h3>${t('values.innovation')}</h3>
             <p>${t('values.innovationDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">🎯</div>
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 14h-1a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1m18 7h1a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-1" />
+                <path d="M3 11a9 9 0 0 1 18 0M21 14v1a3 3 0 0 1-3 3h-2" />
+                <circle cx="12" cy="11" r="2.5" />
+                <path d="M12 8.5v3h3" />
+              </svg>
+            </div>
             <h3>${t('values.service')}</h3>
             <p>${t('values.serviceDesc')}</p>
           </div>
