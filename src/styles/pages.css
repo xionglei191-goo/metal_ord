@@ -323,31 +323,96 @@
 .mfg-card {
   text-align: center;
   padding: var(--space-8);
+  transition: all var(--transition-base);
+}
+
+.mfg-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-glow-gold);
 }
 
 .mfg-card-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto var(--space-4);
+  width: 96px;
+  height: 96px;
+  margin: 0 auto var(--space-6);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-lg);
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  color: var(--color-blue);
-  font-size: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(200, 169, 110, 0.04);
+  border: 1px solid rgba(200, 169, 110, 0.15);
+  color: var(--color-gold);
+  padding: var(--space-4);
+  transition: all var(--transition-base);
 }
 
 .mfg-card h3 {
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+  transition: color var(--transition-base);
+}
+
+.mfg-card:hover h3 {
+  color: var(--color-gold);
 }
 
 .mfg-card p {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Custom capability SVG styling */
+.mfg-svg-icon {
+  width: 100%;
+  height: 100%;
+  transition: all var(--transition-base);
+}
+
+/* Micro-animations on hover */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes heat-glow {
+  0%, 100% { fill: rgba(200, 169, 110, 0.1); opacity: 0.8; }
+  50% { fill: rgba(200, 169, 110, 0.35); opacity: 1; }
+}
+
+@keyframes tool-cut {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-2px, -2px); }
+}
+
+@keyframes probe-measure {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* Apply animations on hover */
+.mfg-card:hover .mfg-svg-icon circle[cx="42"][cy="42"] {
+  transform-origin: 42px 42px;
+  animation: spin-slow 4s linear infinite;
+}
+.mfg-card:hover .mfg-svg-icon circle[cx="72"][cy="58"] {
+  transform-origin: 72px 58px;
+  animation: spin-slow 3s linear infinite;
+}
+.mfg-card:hover .mfg-svg-icon rect[x="42"][y="35"] {
+  animation: heat-glow 1.5s ease-in-out infinite;
+}
+.mfg-card:hover .mfg-svg-icon path[d="M60 78l-5-12h15l-3 12z"] {
+  animation: tool-cut 1s ease-in-out infinite;
+}
+.mfg-card:hover .mfg-svg-icon path[d="M50 10v32"] {
+  animation: probe-measure 2s ease-in-out infinite;
+}
+.mfg-card:hover .mfg-svg-icon circle[cx="50"][cy="45"] {
+  animation: probe-measure 2s ease-in-out infinite;
 }
 
 .mfg-process {
