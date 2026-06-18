@@ -186,12 +186,10 @@ export const clients = [
     nameZh: '比亚迪',
     nameEn: 'BYD',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 12h8c2.5 0 4.5 2 4.5 4s-2 4-4.5 4h-8zm0 8h8c2.5 0 4.5 2 4.5 4s-2 4-4.5 4h-8z" stroke="var(--color-blue)" />
-        <path d="M16 12v16" stroke="var(--color-blue)" />
-        <path d="M36 12l8 9m8-9l-8 9v9" stroke="var(--color-gold)" />
-        <path d="M56 12h6c5.5 0 10 4 10 9s-4.5 9-10 9h-6z" stroke="var(--color-blue)" />
-        <path d="M56 12v16" stroke="var(--color-blue)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 12h10c3 0 5.5 2 5.5 4.5S25 21 22 21h-10v-9zm4 13.5v-11h6c1.5 0 2.5.8 2.5 2s-1 2-2.5 2h-6v7z" fill="#E21E26" />
+        <path d="M30 12l5.5 8.5v7.5h3v-7.5l5.5-8.5h-3.5l-3.5 5.5-3.5-5.5z" fill="#E21E26" />
+        <path d="M48 12h7c5.5 0 9 3.5 9 8s-3.5 8-9 8h-7v-16zm3 13.5h4c3.5 0 6-2 6-5.5s-2.5-5.5-6-5.5h-4v11z" fill="#E21E26" />
       </svg>
     `
   },
@@ -199,12 +197,14 @@ export const clients = [
     nameZh: '吉利汽车',
     nameEn: 'Geely Auto',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 13h36c0 0 2 12-18 16-20-4-18-16-18-16z" stroke="var(--color-gold)" stroke-width="1.8" />
-        <path d="M40 13v15" stroke="var(--color-blue)" />
-        <path d="M26 21c4-1 10-2 14-2s10 1 14 2" stroke="var(--color-blue)" />
-        <path d="M31 13l3 8m15-8l-3 8" stroke="var(--color-text-muted)" />
-        <path d="M35 21l5 7m10-7l-5 7" stroke="var(--color-text-muted)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 12h36c0 0 3 10-18 16C19 22 22 12 22 12z" fill="#1F2022" stroke="#C5A059" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M40 12v6.5c-4 0-7.5-.7-10.5-2C30 14 31.5 12.8 33 12h7z" fill="#0D3B82" stroke="#C5A059" stroke-width="1" />
+        <path d="M40 12h7c1.5.8 3 2 3.5 4.5-3 1.3-6.5 2-10.5 2v-6.5z" fill="#0D3B82" stroke="#C5A059" stroke-width="1" />
+        <path d="M26.5 18c3.5.8 8 1.2 13.5 1.2V24c-7.5-.5-11.5-2.5-13.5-6z" fill="#0D3B82" stroke="#C5A059" stroke-width="1" />
+        <path d="M40 19.2c5.5 0 10-.4 13.5-1.2-2 3.5-6 5.5-13.5 6v-4.8z" fill="#0D3B82" stroke="#C5A059" stroke-width="1" />
+        <path d="M40 24v4c-11-3.5-12.5-10-12.5-10 4 1.5 8.5 2.2 12.5 2.5z" fill="#1F2022" stroke="#C5A059" stroke-width="1" />
+        <path d="M40 24c4-.3 8.5-1 12.5-2.5 0 0-1.5 6.5-12.5 10v-7.5z" fill="#1F2022" stroke="#C5A059" stroke-width="1" />
       </svg>
     `
   },
@@ -212,10 +212,17 @@ export const clients = [
     nameZh: '奇瑞汽车',
     nameEn: 'Chery Auto',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="40" cy="20" rx="22" ry="12" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M30 25l10-14 10 14" stroke="var(--color-gold)" stroke-width="2" />
-        <path d="M34 20h12" stroke="var(--color-gold)" stroke-width="1.5" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cherySilver" x1="20" y1="10" x2="60" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#E2E5E7"/>
+            <stop offset="50%" stop-color="#9CA3A8"/>
+            <stop offset="100%" stop-color="#5B6166"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="40" cy="20" rx="22" ry="13" stroke="url(#cherySilver)" stroke-width="3" />
+        <path d="M28 25.5l12-14.5 12 14.5" stroke="url(#cherySilver)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M32 20h16" stroke="url(#cherySilver)" stroke-width="2.5" />
       </svg>
     `
   },
@@ -223,10 +230,10 @@ export const clients = [
     nameZh: '东风汽车',
     nameEn: 'Dongfeng Auto',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="40" cy="20" r="14" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M40 9c5 0 9 4 9 9s-4 7-9 7 5-3 5-7-5-5-5-9z" stroke="var(--color-gold)" stroke-width="1.8" />
-        <path d="M40 31c-5 0-9-4-9-9s4-7 9-7-5 3-5 7 5 5 5 9z" stroke="var(--color-gold)" stroke-width="1.8" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="20" r="14" stroke="#E3001B" stroke-width="2.5" />
+        <path d="M40 9.5c4.5 0 8.5 3.5 8.5 8.5 0 4-3.5 6.5-8.5 6.5 4.5-2.5 4.5-5 4.5-7.5 0-3-4.5-4-4.5-7.5z" fill="#E3001B" />
+        <path d="M40 30.5c-4.5 0-8.5-3.5-8.5-8.5 0-4 3.5-6.5 8.5-6.5-4.5 2.5-4.5 5-4.5 7.5 0 3 4.5 4 4.5 7.5z" fill="#E3001B" />
       </svg>
     `
   },
@@ -234,9 +241,15 @@ export const clients = [
     nameZh: '广汽集团',
     nameEn: 'GAC Group',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="40" cy="20" r="14" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M48 15a10 10 0 1 0-1 9H40v-4" stroke="var(--color-gold)" stroke-width="2" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gacSilver" x1="26" y1="10" x2="54" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#F2F4F5"/>
+            <stop offset="60%" stop-color="#A2A9AF"/>
+            <stop offset="100%" stop-color="#6E757A"/>
+          </linearGradient>
+        </defs>
+        <path d="M40 8c6.6 0 12 5.4 12 12s-5.4 12-12 12c-6.1 0-11-4.5-11.9-10.4h5.2c.9 3 3.7 5.2 6.7 5.2 3.9 0 7-3.1 7-7s-3.1-7-7-7c-3 0-5.8 2.2-6.7 5.2H28.1C29 12.5 33.9 8 40 8z" fill="url(#gacSilver)" />
       </svg>
     `
   },
@@ -244,9 +257,15 @@ export const clients = [
     nameZh: '小鹏汽车',
     nameEn: 'Xpeng Motors',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M26 11l11 8M26 29l11-8M54 11l-11 8M54 29l-11-8" stroke="var(--color-gold)" stroke-width="2.2" />
-        <circle cx="40" cy="20" r="2.5" fill="var(--color-blue)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="xpengGrad" x1="20" y1="8" x2="60" y2="32" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#E2E5E8"/>
+            <stop offset="100%" stop-color="#70767D"/>
+          </linearGradient>
+        </defs>
+        <path d="M26 10l12.5 8.5c.8.6.8 1.4 0 2L26 29c6-3 11-3.5 13.5-1L41 26l-3-12-4.5-4z" fill="url(#xpengGrad)" />
+        <path d="M54 10l-12.5 8.5c-.8.6-.8 1.4 0 2L54 29c-6-3-11-3.5-13.5-1L39 26l3-12 4.5-4z" fill="url(#xpengGrad)" />
       </svg>
     `
   },
@@ -254,10 +273,11 @@ export const clients = [
     nameZh: '潍柴动力',
     nameEn: 'Weichai Power',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 10h36l6 14-24 10-24-10z" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M32 16l8 10 8-10" stroke="var(--color-gold)" stroke-width="2" />
-        <path d="M26 14h28" stroke="var(--color-text-muted)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 10h32l4 10-4 10H24l-4-10z" fill="#005CA9" />
+        <path d="M30 18h20v4H30z" fill="#E3001B" />
+        <path d="M35 14h10v2H35z" fill="#FFFFFF" />
+        <path d="M35 24h10v2H35z" fill="#FFFFFF" />
       </svg>
     `
   },
@@ -265,13 +285,8 @@ export const clients = [
     nameZh: '德国FESTO',
     nameEn: 'FESTO (Germany)',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 13h8M18 20h6M18 13v14" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M29 13h8M29 20h6M29 27h8M29 13v14" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M40 15c0-1.5 1-2 2.5-2s2.5 1 2.5 2c0 2-5 2-5 5 0 1.5 1 2 2.5 2s2.5-1 2.5-2" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M48 13h8M52 13v14" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M59 13h5c2 0 3 2 3 4v6c0 2-1 4-3 4h-5c-2 0-3-2-3-4v-6c0-2 1-4 3-4" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M14 27h52" stroke="var(--color-gold)" stroke-width="1" stroke-dasharray="3 3" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 13h10v3h-7v3h6v3h-6v5h-3zm12 0h10v3h-7v3h6v3h-6v2h7v3H27zm14 4c0-1.8 1.2-2.5 3-2.5s3 .7 3 2.5v1h-3v-.7c0-.5-.3-.8-.8-.8s-.7.3-.7.8v.5c0 1 3 1.2 3 3.2 0 1.8-1.2 2.5-3 2.5s-3-.7-3-2.5v-1h3v.7c0 .5.3.8.8.8s.7-.3.7-.8v-.5c0-1-3-1.2-3-3.2zm9-4h9v3h-3v10h-3V16h-3zm9 0h4c3.5 0 6 2 6 5.5s-2.5 5.5-6 5.5h-4zm3 3v5h1c1.8 0 3-1 3-2.5S70 19 68.2 19z" fill="#007DB6" />
       </svg>
     `
   },
@@ -279,10 +294,9 @@ export const clients = [
     nameZh: '江苏华利',
     nameEn: 'Jiangsu Huali',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="40" cy="24" rx="20" ry="6" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M32 10v20M48 10v20M32 20h16" stroke="var(--color-gold)" stroke-width="2.2" />
-        <path d="M28 14c4 4 20 4 24 0" stroke="var(--color-blue)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 12h6v6h16v-6h6v16h-6v-7H32v7h-6z" fill="#003399" />
+        <circle cx="40" cy="20" r="14" stroke="#CC0000" stroke-width="2" />
       </svg>
     `
   },
@@ -290,10 +304,10 @@ export const clients = [
     nameZh: '浙江双环',
     nameEn: 'Zhejiang Shuanghuan',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="32" cy="20" r="10" stroke="var(--color-blue)" stroke-width="2.2" />
-        <circle cx="48" cy="20" r="10" stroke="var(--color-gold)" stroke-width="2.2" />
-        <path d="M38 14a10 10 0 0 1 4 12" stroke="var(--color-blue)" stroke-width="2.2" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="34" cy="20" r="10" stroke="#005691" stroke-width="3.5" />
+        <circle cx="46" cy="20" r="10" stroke="#005691" stroke-width="3.5" />
+        <path d="M40 13.5a10 10 0 0 1 6 6.5" stroke="#E3001B" stroke-width="3.5" />
       </svg>
     `
   },
@@ -301,10 +315,10 @@ export const clients = [
     nameZh: '新亚传动',
     nameEn: 'Xinya Transmission',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="24" y="10" width="32" height="20" rx="3" stroke="var(--color-blue)" stroke-width="1.5" />
-        <path d="M30 20l10-6 10 6-10 6z" stroke="var(--color-gold)" stroke-width="2" />
-        <circle cx="40" cy="20" r="2" fill="var(--color-blue)" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="25" y="11" width="30" height="18" rx="2" stroke="#0D47A1" stroke-width="2" />
+        <path d="M31 20l9-5 9 5-9 5z" fill="#FFC107" />
+        <circle cx="40" cy="20" r="2.5" fill="#0D47A1" />
       </svg>
     `
   },
@@ -312,9 +326,9 @@ export const clients = [
     nameZh: '汇川技术',
     nameEn: 'Inovance',
     logoSvg: `
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 18c8-8 20-8 28 0s12 12 20 0" stroke="var(--color-blue)" stroke-width="2" />
-        <path d="M12 24c8-8 20-8 28 0s12 12 20 0" stroke="var(--color-gold)" stroke-width="2" />
+      <svg viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 15c8-5 16-2 24 5s14 8 22 2" stroke="#0055A5" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M14 23c8-5 16-2 24 5s14 8 22 2" stroke="#00A850" stroke-width="3.5" stroke-linecap="round" />
       </svg>
     `
   }
