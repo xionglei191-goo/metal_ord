@@ -182,13 +182,140 @@ export const products = [
 ];
 
 export const clients = [
-  { nameZh: '比亚迪', nameEn: 'BYD' },
-  { nameZh: '潍柴动力', nameEn: 'Weichai Power' },
-  { nameZh: '德国FESTO', nameEn: 'FESTO (Germany)' },
-  { nameZh: '奇瑞汽车', nameEn: 'Chery Auto' },
-  { nameZh: '江苏华利', nameEn: 'Jiangsu Huali' },
-  { nameZh: '浙江双环', nameEn: 'Zhejiang Shuanghuan' },
-  { nameZh: '新亚传动', nameEn: 'Xinya Transmission' },
-  { nameZh: '小鹏汽车', nameEn: 'Xpeng Motors' },
-  { nameZh: '广汽集团', nameEn: 'GAC Group' },
+  {
+    nameZh: '比亚迪',
+    nameEn: 'BYD',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 12h8c2.5 0 4.5 2 4.5 4s-2 4-4.5 4h-8zm0 8h8c2.5 0 4.5 2 4.5 4s-2 4-4.5 4h-8z" stroke="var(--color-blue)" />
+        <path d="M16 12v16" stroke="var(--color-blue)" />
+        <path d="M36 12l8 9m8-9l-8 9v9" stroke="var(--color-gold)" />
+        <path d="M56 12h6c5.5 0 10 4 10 9s-4.5 9-10 9h-6z" stroke="var(--color-blue)" />
+        <path d="M56 12v16" stroke="var(--color-blue)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '吉利汽车',
+    nameEn: 'Geely Auto',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 13h36c0 0 2 12-18 16-20-4-18-16-18-16z" stroke="var(--color-gold)" stroke-width="1.8" />
+        <path d="M40 13v15" stroke="var(--color-blue)" />
+        <path d="M26 21c4-1 10-2 14-2s10 1 14 2" stroke="var(--color-blue)" />
+        <path d="M31 13l3 8m15-8l-3 8" stroke="var(--color-text-muted)" />
+        <path d="M35 21l5 7m10-7l-5 7" stroke="var(--color-text-muted)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '奇瑞汽车',
+    nameEn: 'Chery Auto',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="40" cy="20" rx="22" ry="12" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M30 25l10-14 10 14" stroke="var(--color-gold)" stroke-width="2" />
+        <path d="M34 20h12" stroke="var(--color-gold)" stroke-width="1.5" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '东风汽车',
+    nameEn: 'Dongfeng Auto',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="40" cy="20" r="14" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M40 9c5 0 9 4 9 9s-4 7-9 7 5-3 5-7-5-5-5-9z" stroke="var(--color-gold)" stroke-width="1.8" />
+        <path d="M40 31c-5 0-9-4-9-9s4-7 9-7-5 3-5 7 5 5 5 9z" stroke="var(--color-gold)" stroke-width="1.8" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '广汽集团',
+    nameEn: 'GAC Group',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="40" cy="20" r="14" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M48 15a10 10 0 1 0-1 9H40v-4" stroke="var(--color-gold)" stroke-width="2" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '小鹏汽车',
+    nameEn: 'Xpeng Motors',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M26 11l11 8M26 29l11-8M54 11l-11 8M54 29l-11-8" stroke="var(--color-gold)" stroke-width="2.2" />
+        <circle cx="40" cy="20" r="2.5" fill="var(--color-blue)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '潍柴动力',
+    nameEn: 'Weichai Power',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10h36l6 14-24 10-24-10z" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M32 16l8 10 8-10" stroke="var(--color-gold)" stroke-width="2" />
+        <path d="M26 14h28" stroke="var(--color-text-muted)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '德国FESTO',
+    nameEn: 'FESTO (Germany)',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 13h8M18 20h6M18 13v14" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M29 13h8M29 20h6M29 27h8M29 13v14" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M40 15c0-1.5 1-2 2.5-2s2.5 1 2.5 2c0 2-5 2-5 5 0 1.5 1 2 2.5 2s2.5-1 2.5-2" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M48 13h8M52 13v14" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M59 13h5c2 0 3 2 3 4v6c0 2-1 4-3 4h-5c-2 0-3-2-3-4v-6c0-2 1-4 3-4" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M14 27h52" stroke="var(--color-gold)" stroke-width="1" stroke-dasharray="3 3" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '江苏华利',
+    nameEn: 'Jiangsu Huali',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="40" cy="24" rx="20" ry="6" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M32 10v20M48 10v20M32 20h16" stroke="var(--color-gold)" stroke-width="2.2" />
+        <path d="M28 14c4 4 20 4 24 0" stroke="var(--color-blue)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '浙江双环',
+    nameEn: 'Zhejiang Shuanghuan',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="20" r="10" stroke="var(--color-blue)" stroke-width="2.2" />
+        <circle cx="48" cy="20" r="10" stroke="var(--color-gold)" stroke-width="2.2" />
+        <path d="M38 14a10 10 0 0 1 4 12" stroke="var(--color-blue)" stroke-width="2.2" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '新亚传动',
+    nameEn: 'Xinya Transmission',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="24" y="10" width="32" height="20" rx="3" stroke="var(--color-blue)" stroke-width="1.5" />
+        <path d="M30 20l10-6 10 6-10 6z" stroke="var(--color-gold)" stroke-width="2" />
+        <circle cx="40" cy="20" r="2" fill="var(--color-blue)" />
+      </svg>
+    `
+  },
+  {
+    nameZh: '汇川技术',
+    nameEn: 'Inovance',
+    logoSvg: `
+      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 18c8-8 20-8 28 0s12 12 20 0" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M12 24c8-8 20-8 28 0s12 12 20 0" stroke="var(--color-gold)" stroke-width="2" />
+      </svg>
+    `
+  }
 ];

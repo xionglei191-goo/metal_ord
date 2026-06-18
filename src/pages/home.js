@@ -186,7 +186,12 @@ export function renderHome() {
       <div class="client-marquee">
         <div class="client-track">
           ${[...clients, ...clients].map(c => `
-            <div class="client-logo">${isZh ? c.nameZh : c.nameEn}</div>
+            <div class="client-card">
+              <div class="client-logo-wrapper">
+                ${c.logoSvg}
+              </div>
+              <div class="client-name">${isZh ? c.nameZh : c.nameEn}</div>
+            </div>
           `).join('')}
         </div>
       </div>
