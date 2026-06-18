@@ -25,13 +25,13 @@ export function renderAbout() {
             <p>${t('about.introP2')}</p>
             <p>${t('about.introP3')}</p>
           </div>
-          <div class="about-image reveal-right">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-4);color:var(--color-text-muted);padding:var(--space-8);">
-              <div style="font-size:4rem;">🏭</div>
-              <span style="font-size:var(--text-lg);font-weight:var(--font-semibold);color:var(--color-text-secondary);">
+          <div class="about-image reveal-right" style="position:relative;">
+            <img src="/images/factory-aerial.webp" alt="Shengfang Metal Factory" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:var(--space-4);left:var(--space-4);right:var(--space-4);padding:var(--space-4);background:rgba(15,29,50,0.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--color-border);border-radius:var(--radius-lg);display:flex;flex-direction:column;gap:var(--space-1);">
+              <span style="font-size:var(--text-base);font-weight:var(--font-semibold);color:var(--color-gold);">
                 ${isZh ? '厂房面积 10,000㎡' : 'Factory Area 10,000㎡'}
               </span>
-              <span style="font-size:var(--text-sm);">
+              <span style="font-size:var(--text-xs);color:var(--color-text-secondary);">
                 ${isZh ? '浙江省台州市玉环市机电工业园区' : 'Electromechanical Industrial Park, Yuhuan, Taizhou'}
               </span>
             </div>
