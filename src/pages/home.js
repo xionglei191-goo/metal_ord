@@ -8,6 +8,53 @@ export function renderHome() {
   const lang = getLang();
   const isZh = lang === 'zh';
 
+  const valueIcons = [
+    // 0: 诚信共赢 (Integrity)
+    `
+      <svg viewBox="0 0 100 100" class="value-svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="38" cy="50" r="16" stroke="var(--color-blue)" stroke-width="2" fill="rgba(59, 130, 246, 0.05)" />
+        <circle cx="62" cy="50" r="16" stroke="var(--color-gold)" stroke-width="2" fill="rgba(200, 169, 110, 0.05)" />
+        <path d="M38 50h24" stroke="var(--color-text-muted)" stroke-dasharray="3 3" />
+        <circle cx="50" cy="50" r="3" fill="var(--color-gold)" />
+        <path d="M50 34c8 0 12 8 12 16s-4 16-12 16-12-8-12-16 4-16 12-16z" stroke="var(--color-text-primary)" stroke-dasharray="2 2" />
+        <path d="M38 30v4M62 30v4M38 66v4M62 66v4" stroke="var(--color-text-muted)" />
+      </svg>
+    `,
+    // 1: 卓越品质 (Quality)
+    `
+      <svg viewBox="0 0 100 100" class="value-svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="55" r="18" stroke="var(--color-gold)" stroke-width="2.5" fill="rgba(200, 169, 110, 0.1)" />
+        <path d="M25 28h50M25 28v14M75 28v14M25 35h50M35 28v7M45 28v7M55 28v7M65 28v7" stroke="var(--color-blue)" />
+        <path d="M32 42v18h4v-8h10" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M68 42v18h-4v-8h-10" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M50 37v36" stroke="var(--color-text-muted)" stroke-dasharray="2 2" />
+        <circle cx="50" cy="73" r="2" fill="var(--color-gold)" />
+      </svg>
+    `,
+    // 2: 创新驱动 (Innovation)
+    `
+      <svg viewBox="0 0 100 100" class="value-svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 18c-15 0-24 10-24 24 0 10 6 16 10 22v8h28v-8c4-6 10-12 10-22 0-14-9-24-24-24z" stroke="var(--color-blue)" stroke-width="2" fill="rgba(59, 130, 246, 0.05)" />
+        <circle cx="50" cy="42" r="8" stroke="var(--color-gold)" stroke-width="1.5" />
+        <path d="M50 30v4M50 50v4M38 42h4M58 42h4" stroke="var(--color-gold)" />
+        <path d="M40 72h20M42 77h16M45 82h10" stroke="var(--color-blue)" stroke-width="2" />
+        <path d="M50 10v4M26 26l3 3M14 42h4M26 58l3-3M74 26l-3 3M86 42h-4M74 58l-3-3" stroke="var(--color-gold)" opacity="0.8" />
+      </svg>
+    `,
+    // 3: 客户第一 (Service)
+    `
+      <svg viewBox="0 0 100 100" class="value-svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="50" r="30" stroke="var(--color-blue)" stroke-dasharray="4 2" />
+        <circle cx="50" cy="50" r="20" stroke="var(--color-blue)" fill="rgba(59, 130, 246, 0.05)" />
+        <circle cx="50" cy="50" r="8" stroke="var(--color-gold)" stroke-width="2" fill="rgba(200, 169, 110, 0.1)" />
+        <path d="M15 50h70M50 15v70" stroke="var(--color-text-muted)" stroke-width="1" stroke-dasharray="2 2" />
+        <path d="M72 28a32 32 0 0 1 6 12l-4-2M78 40l4-6" stroke="var(--color-gold)" stroke-width="1.5" />
+        <path d="M28 72a32 32 0 0 1-6-12l4 2M22 60l-4 6" stroke="var(--color-gold)" stroke-width="1.5" />
+        <circle cx="50" cy="50" r="2" fill="var(--color-gold)" />
+      </svg>
+    `
+  ];
+
   main.innerHTML = `
     <!-- Hero -->
     <section class="hero" id="hero-section">
@@ -104,22 +151,22 @@ export function renderHome() {
         </div>
         <div class="values-grid stagger-children">
           <div class="card value-card">
-            <div class="value-icon">🤝</div>
+            <div class="value-icon">${valueIcons[0]}</div>
             <h3>${t('values.integrity')}</h3>
             <p>${t('values.integrityDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">🏆</div>
+            <div class="value-icon">${valueIcons[1]}</div>
             <h3>${t('values.quality')}</h3>
             <p>${t('values.qualityDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">💡</div>
+            <div class="value-icon">${valueIcons[2]}</div>
             <h3>${t('values.innovation')}</h3>
             <p>${t('values.innovationDesc')}</p>
           </div>
           <div class="card value-card">
-            <div class="value-icon">🎯</div>
+            <div class="value-icon">${valueIcons[3]}</div>
             <h3>${t('values.service')}</h3>
             <p>${t('values.serviceDesc')}</p>
           </div>

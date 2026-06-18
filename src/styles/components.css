@@ -706,7 +706,7 @@
   background: rgba(200, 169, 110, 0.08);
   border: 1px solid rgba(200, 169, 110, 0.2);
   color: var(--color-gold);
-  font-size: 1.75rem;
+  padding: var(--space-4);
   transition: all var(--transition-slow);
 }
 
@@ -714,6 +714,63 @@
   background: rgba(200, 169, 110, 0.15);
   transform: scale(1.1);
   box-shadow: var(--shadow-glow-gold);
+}
+
+.value-svg-icon {
+  width: 100%;
+  height: 100%;
+  transition: all var(--transition-base);
+}
+
+/* Value card hover animations */
+.value-card:hover .value-svg-icon {
+  color: var(--color-gold);
+}
+
+/* Caliper slide on hover */
+.value-card:hover .value-svg-icon path[d*="M32 42v18h4v-8h10"] {
+  animation: caliper-slide 1.5s ease-in-out infinite;
+}
+
+/* Rays pulse on hover */
+.value-card:hover .value-svg-icon path[d*="M50 10v4M26 26l3 3"] {
+  animation: ray-pulse 1s ease-in-out infinite;
+}
+
+/* Connection pulse on hover */
+.value-card:hover .value-svg-icon circle[cx="50"][cy="50"][r="3"] {
+  transform-origin: 50px 50px;
+  animation: node-pulse 1.2s ease-in-out infinite;
+}
+
+/* Service arrow rotate on hover */
+.value-card:hover .value-svg-icon path[d*="M72 28a32"] {
+  transform-origin: 50px 50px;
+  animation: target-rotate 4s linear infinite;
+}
+.value-card:hover .value-svg-icon path[d*="M28 72a32"] {
+  transform-origin: 50px 50px;
+  animation: target-rotate 4s linear infinite;
+}
+
+@keyframes caliper-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-3px); }
+}
+
+@keyframes ray-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+@keyframes target-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .value-card h3 {
