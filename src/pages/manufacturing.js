@@ -157,32 +157,36 @@ export function renderManufacturing() {
     <!-- Equipment Highlight -->
     <section class="section" style="background:var(--color-bg-secondary);">
       <div class="container">
-        <div class="reveal" style="text-align:center;padding:var(--space-12) 0;">
-          <div style="font-size:6rem;margin-bottom:var(--space-4);">🏭</div>
-          <h2 style="font-size:var(--text-4xl);font-weight:var(--font-bold);margin-bottom:var(--space-4);">
-            ${isZh ? '10,000㎡ 现代化厂房' : '10,000㎡ Modern Facility'}
-          </h2>
-          <p style="font-size:var(--text-lg);color:var(--color-text-secondary);max-width:700px;margin:0 auto var(--space-8);line-height:var(--leading-relaxed);">
-            ${isZh
-              ? '配备120多台进口精密数控设备，24小时自动化产线运行，日产能可达3000+件。我们持续投资先进设备和技术，确保为客户提供最高品质的产品。'
-              : 'Equipped with 120+ imported precision CNC machines, 24-hour automated production lines with 3000+ daily output. We continuously invest in advanced equipment and technology to ensure the highest quality products for our clients.'}
-          </p>
-          <div class="stats-grid" style="max-width:800px;margin:0 auto;">
-            <div class="stat-item">
-              <div class="stat-number text-gradient-gold">120+</div>
-              <div class="stat-label">${isZh ? '进口设备' : 'CNC Machines'}</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number text-gradient-gold">24H</div>
-              <div class="stat-label">${isZh ? '自动化产线' : 'Automated Line'}</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number text-gradient-gold">3000+</div>
-              <div class="stat-label">${isZh ? '日产能' : 'Daily Output'}</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number text-gradient-gold">0.01</div>
-              <div class="stat-label">${isZh ? 'mm 精度控制' : 'mm Precision'}</div>
+        <div class="mfg-facility-highlight reveal">
+          <div class="mfg-facility-image">
+            <img src="/images/factory-aerial.webp" alt="Shengfang Metal Factory">
+          </div>
+          <div class="mfg-facility-info">
+            <h2 style="font-size:var(--text-4xl);font-weight:var(--font-bold);margin-bottom:var(--space-4);">
+              ${isZh ? '10,000㎡ 现代化厂房' : '10,000㎡ Modern Facility'}
+            </h2>
+            <p style="font-size:var(--text-base);color:var(--color-text-secondary);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">
+              ${isZh
+                ? '配备120多台进口精密数控设备，24小时自动化产线运行，日产能可达3000+件。我们持续投资先进设备和技术，确保为客户提供最高品质的产品。'
+                : 'Equipped with 120+ imported precision CNC machines, 24-hour automated production lines with 3000+ daily output. We continuously invest in advanced equipment and technology to ensure the highest quality products for our clients.'}
+            </p>
+            <div class="mfg-facility-stats">
+              <div class="mfg-facility-stat-item">
+                <div class="mfg-facility-stat-number text-gradient-gold">120+</div>
+                <div class="mfg-facility-stat-label">${isZh ? '进口设备' : 'CNC Machines'}</div>
+              </div>
+              <div class="mfg-facility-stat-item">
+                <div class="mfg-facility-stat-number text-gradient-gold">24H</div>
+                <div class="mfg-facility-stat-label">${isZh ? '自动化产线' : 'Automated Line'}</div>
+              </div>
+              <div class="mfg-facility-stat-item">
+                <div class="mfg-facility-stat-number text-gradient-gold">3000+</div>
+                <div class="mfg-facility-stat-label">${isZh ? '日产能' : 'Daily Output'}</div>
+              </div>
+              <div class="mfg-facility-stat-item">
+                <div class="mfg-facility-stat-number text-gradient-gold">0.01</div>
+                <div class="mfg-facility-stat-label">${isZh ? 'mm 精度控制' : 'mm Precision'}</div>
+              </div>
             </div>
           </div>
         </div>
